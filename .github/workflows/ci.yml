@@ -20,7 +20,7 @@ jobs:
       with:
         python-version: 3.9
 
-    - run: pip install -r tests/requirements-linting.txt
+    - run: make install-linting
     - run: pip install .
 
     - run: make lint
@@ -49,7 +49,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - run: pip install -r tests/requirements-testing.txt
+    - run: make install-testing
     - run: pip install .
 
     - run: make test

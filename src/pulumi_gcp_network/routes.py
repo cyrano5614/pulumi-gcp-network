@@ -26,6 +26,21 @@ class Routes(pulumi.ComponentResource):
         module_depends_on: pulumi.Input[Sequence[pulumi.Input[Any]]] = [],
         opts: Optional[pulumi.ResourceOptions] = None,
     ):
+        """__init__.
+
+        :param resource_name: pulumi resource name.
+        :type resource_name: str
+        :param project_id: The ID of the project where the routes will be created.
+        :type project_id: pulumi.Input[str]
+        :param network_name: The name of the network where routes will be created.
+        :type network_name: pulumi.Input[str]
+        :param routes: List of routes being created in this VPC.
+        :type routes: pulumi.Input[Sequence[Mapping[str, pulumi.Input[str]]]]
+        :param module_depends_on: List of modules or resources this module depends on.
+        :type module_depends_on: pulumi.Input[Sequence[pulumi.Input[Any]]]
+        :param opts: Options for pulumi resource.
+        :type opts: Optional[pulumi.ResourceOptions]
+        """
         super().__init__(
             t="zityspace-gcp:network:Routes",
             name=resource_name,

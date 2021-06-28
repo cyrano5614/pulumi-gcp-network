@@ -20,9 +20,9 @@ install: install-base
 install-base:
 	pip install -r requirements.txt
 
-# help: install-tests                  - install test dependencies
-.PHONY: install-tests
-install-tests:
+# help: install-testing                - install test dependencies
+.PHONY: install-testing
+install-testing:
 	pip install -r tests/requirements-testing.txt
 
 # help: install-linting                - install linting dependencies
@@ -38,7 +38,8 @@ help:
 # help: test                           - run tests
 .PHONY: test
 test:
-	@python -m unittest discover tests/
+	@pytest -v -s
+	# @python -m unittest discover tests/
 
 # help: lint                           - run lint
 .PHONY: lint

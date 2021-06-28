@@ -3,7 +3,7 @@ import unittest
 import pulumi
 
 
-class MyMocks(pulumi.runtime.Mocks):
+class TestMocks(pulumi.runtime.Mocks):
     def new_resource(self, args: pulumi.runtime.MockResourceArgs):
         return [args.name + "_id", args.inputs]
 
@@ -11,7 +11,7 @@ class MyMocks(pulumi.runtime.Mocks):
         return {}
 
 
-pulumi.runtime.set_mocks(MyMocks())
+pulumi.runtime.set_mocks(TestMocks())
 
 # It's important to import _after_ the mocks are defined.
 from pulumi_gcp_network.routes import (  # noqa isort:skip type: ignore

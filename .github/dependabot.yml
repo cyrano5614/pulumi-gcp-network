@@ -7,7 +7,7 @@ updates:
       interval: "weekly"
     # Only allow updates to the lockfile for pip and
     # ignore any version updates that affect the manifest
-    versioning-strategy: lockfile-only
+    # versioning-strategy: lockfile-only
 
 # Enable version updates for Actions
   - package-ecosystem: "github-actions"
