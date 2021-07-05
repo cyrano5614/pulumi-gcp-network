@@ -10,7 +10,10 @@ on:
 
 jobs:
   lint:
+    name: Linting
     runs-on: ubuntu-latest
+    env:
+      POETRY_VERSION: 1.1.7
 
     steps:
     - uses: actions/checkout@v2
@@ -20,6 +23,11 @@ jobs:
       with:
         python-version: 3.9
 
+    - name: set up poetry
+      uses: abatilo/actions-poetry@v2.0.0
+      with:
+        poetry-version: ${{ env.POETRY_VERSION }}
+ 
     - run: make install
 
     - run: make lint
@@ -37,6 +45,7 @@ jobs:
     env:
       PYTHON: ${{ matrix.python-version }}
       OS: ${{ matrix.os }}
+      POETRY_VERSION: 1.1.7
 
     runs-on: ${{ format('{0}-latest', matrix.os) }}
 
@@ -47,6 +56,11 @@ jobs:
       uses: actions/setup-python@v2.2.2
       with:
         python-version: ${{ matrix.python-version }}
+
+    - name: set up poetry
+      uses: abatilo/actions-poetry@v2.0.0
+      with:
+        poetry-version: ${{ env.POETRY_VERSION }}
 
     - run: make install
 

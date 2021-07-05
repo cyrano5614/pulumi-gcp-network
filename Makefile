@@ -43,25 +43,25 @@ help:
 # help: test                           - run tests
 .PHONY: test
 test:
-	@pytest -v -s
+	@poetry run pytest -v -s
 
 # help: lint                           - run lint
 .PHONY: lint
 lint:
-	@flake8 src/ tests/ examples/
-	@isort src/ tests/ examples/ --check-only --df --profile=black
-	@black src/ tests/ examples/ --check --diff
+	@poetry run flake8 src/ tests/ examples/
+	@poetry run isort src/ tests/ examples/ --check-only --df --profile=black
+	@poetry run black src/ tests/ examples/ --check --diff
 
 # help: mypy                           - run typechecking
 .PHONY: mypy
 mypy:
-	@mypy src/
+	@poetry run mypy src/
 
 # help: format                         - perform code style format
 .PHONY: format
 format:
-	@isort src/ tests/ examples/ --profile=black
-	@black src/ tests/ examples/
+	@poetry run isort src/ tests/ examples/ --profile=black
+	@poetry run black src/ tests/ examples/
 
 # Keep these lines at the end of the file to retain nice help
 # output formatting.
