@@ -1,0 +1,6 @@
+name: basic-subnets
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: GCP network basic subnets demo project

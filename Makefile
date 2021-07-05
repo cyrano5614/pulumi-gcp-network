@@ -7,28 +7,33 @@ MAKEFLAGS += --no-print-directory
 # help:
 
 # help: compile-requirements           - compile soft requirements to hard versioned requirements
-.PHONY: compile-requirements
-compile-requirements:
-	pip-compile requirements.in > requirements.txt
+# .PHONY: compile-requirements
+# compile-requirements:
+# 	pip-compile requirements.in > requirements.txt
 
 # help: install                        - install dependencies
 .PHONY: install
-install: install-base
+install: install-all
+
+# help: install-all                    - install all dependencies
+.PHONY: install-all
+install-all:
+	@poetry install
 
 # help: install-base                   - install base dependencies
 .PHONY: install-base
 install-base:
-	pip install -r requirements.txt
+	@poetry install --no-dev
 
 # help: install-testing                - install test dependencies
 .PHONY: install-testing
 install-testing:
-	pip install -r tests/requirements-testing.txt
+	@poetry install
 
 # help: install-linting                - install linting dependencies
 .PHONY: install-linting
 install-linting:
-	pip install -r tests/requirements-linting.txt
+	@poetry install
 
 # help: help                           - display this makefile's help information
 .PHONY: help
@@ -39,7 +44,6 @@ help:
 .PHONY: test
 test:
 	@pytest -v -s
-	# @python -m unittest discover tests/
 
 # help: lint                           - run lint
 .PHONY: lint

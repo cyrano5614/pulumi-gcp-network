@@ -1,0 +1,6 @@
+name: basic-routes
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: GCP network basic routes demo project

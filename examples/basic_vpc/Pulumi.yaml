@@ -1,0 +1,6 @@
+name: basic-vpc
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: GCP network basic vpc demo project

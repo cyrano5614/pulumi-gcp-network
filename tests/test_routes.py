@@ -102,7 +102,7 @@ class TestingRoutes(unittest.TestCase):
             first_gateway, second_gateway = args
 
             self.assertEqual("test-egress-inet", first_gateway)
-            self.assertEqual("test-network-route-1", second_gateway)
+            self.assertEqual("route-test-network-1", second_gateway)
 
         return pulumi.Output.all(
             *[route.name for route in self.routes.created_routes]

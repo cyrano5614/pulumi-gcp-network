@@ -1,0 +1,6 @@
+name: basic-firewall-rules
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: GCP network basic firewall rules demo project
