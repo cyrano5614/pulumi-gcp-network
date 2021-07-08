@@ -75,18 +75,13 @@ class Subnets(pulumi.ComponentResource):
         :param resource_name: pulumi resource name.
         :type resource_name: str
         :param project_id: The ID of the project where subnets will be created.
-        :type project_id: pulumi.Input[str]
+        :type project_id: str
         :param network_name: The name of the network where subnets will be created
-        :type network_name: pulumi.Input[str]
+        :type network_name: str
         :param subnets: The list of subnets being created
-        :type subnets: pulumi.Input[Sequence[Mapping[str, pulumi.Input[str]]]]
-        :param secondary_ranges: Secondary ranges that will be used in some of the subnets
-        :type secondary_ranges: pulumi.Input[
-                    Mapping[
-                        pulumi.Input[str],
-                        Sequence[Mapping[pulumi.Input[str], pulumi.Input[str]]],
-                    ]
-                ]
+        :type subnets: List[Union[Dict[str, Any], SubnetsSubnetArgs]]
+        :param secondary_ranges: Secondary ranges that will be used in some of the subnets. Defaults to {}
+        :type secondary_ranges: Dict[str, List[SubnetsSecondaryRangeArgs]]
         :param opts: Options for pulumi resource.
         :type opts: Optional[pulumi.ResourceOptions]
         """
