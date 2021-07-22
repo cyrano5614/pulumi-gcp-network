@@ -89,10 +89,10 @@ jobs:
         with:
           python-version: '3.8'
 
-    - name: set up poetry
-      uses: abatilo/actions-poetry@v2.0.0
-      with:
-        poetry-version: ${{ env.POETRY_VERSION }}
+      - name: set up poetry
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: ${{ env.POETRY_VERSION }}
 
       - name: install
         run: make install
