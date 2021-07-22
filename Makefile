@@ -35,6 +35,11 @@ install-testing:
 install-linting:
 	@poetry install
 
+# help: build                          - build python package
+.PHONY: build
+build:
+	@poetry build
+
 # help: help                           - display this makefile's help information
 .PHONY: help
 help:

@@ -142,3 +142,4 @@ cython_debug/
 .chglog
 .envrc
 .python-version
+.vscode

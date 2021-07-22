@@ -59,7 +59,7 @@ ignore_missing_imports = true
 
 [tool.poetry]
 name = "pulumi-gcp-network"
-version = "0.1.0"
+version = "0.1.1-alpha.0"
 description = "GCP network based on terraform repository with same name"
 authors = ["Inhan Song <cyrano5614@gmail.com>"]
 maintainers = ["Inhan Song <cyrano5614@gmail.com>"]
