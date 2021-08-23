@@ -296,7 +296,7 @@ six = ">=1.12.0"
 
 [[package]]
 name = "pulumi-gcp"
-version = "5.10.1"
+version = "5.16.0"
 description = "A Pulumi package for creating and managing Google Cloud Platform resources."
 category = "main"
 optional = false
@@ -477,7 +477,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.2,<4.0"
-content-hash = "0139d9ac981ba3e0086ccb2ee4b73e92553eb2fbf99bdb062d9718dae7289d89"
+content-hash = "4c99428692796ff7dd96bab6d7bbac4187f723ecc3affaa5f886bef11f06cdd1"
 
 [metadata.files]
 appdirs = [
@@ -721,7 +721,7 @@ pulumi = [
     {file = "pulumi-3.5.1-py2.py3-none-any.whl", hash = "sha256:9a6c73f78d3e6569a14b9f88067c4b2f0889fafdad62717af43898c7c24de77b"},
 ]
 pulumi-gcp = [
-    {file = "pulumi_gcp-5.10.1.tar.gz", hash = "sha256:26f8d05d87322d192563ac85a406e3fb782e08f4b2a891a70fdbf48695609dec"},
+    {file = "pulumi_gcp-5.16.0.tar.gz", hash = "sha256:4f51167b7e60f8b64d1fc71048ec30a40f62b7066d8c471719207bd3f6cfc340"},
 ]
 pulumi-random = [
     {file = "pulumi_random-4.2.0.tar.gz", hash = "sha256:85d5531eb8cb4ea897ba6730a1378300d6cb0fe10e2a65c7170c9a62ce66f02a"},
