@@ -94,7 +94,7 @@ dataclasses = { version = "*", python = ">=3.6.2,<3.7" }
 [tool.poetry.dev-dependencies]
 black = "^21.6b0"
 flake8 = "^3.9.2"
-isort = "^5.9.1"
+isort = "^5.10.0"
 mypy = "^0.910"
 coverage = "^5.5"
 pytest = "^6.2.4"
