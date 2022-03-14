@@ -280,7 +280,7 @@ six = ">=1.9"
 
 [[package]]
 name = "pulumi"
-version = "3.5.1"
+version = "3.26.1"
 description = "Pulumi's Python SDK"
 category = "main"
 optional = false
@@ -288,7 +288,7 @@ python-versions = "*"
 
 [package.dependencies]
 dill = ">=0.3.0"
-grpcio = ">=1.33.2"
+grpcio = ">=1.33.2,<1.44.0"
 protobuf = ">=3.6.0"
 pyyaml = ">=5.3.1"
 semver = ">=2.8.1"
@@ -477,7 +477,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.6.2,<4.0"
-content-hash = "0139d9ac981ba3e0086ccb2ee4b73e92553eb2fbf99bdb062d9718dae7289d89"
+content-hash = "d04f7e7ec16ce0ac12530ff55b53d344971f893b983a6495ff4795637656c5c0"
 
 [metadata.files]
 appdirs = [
@@ -718,7 +718,7 @@ protobuf = [
     {file = "protobuf-3.17.3.tar.gz", hash = "sha256:72804ea5eaa9c22a090d2803813e280fb273b62d5ae497aaf3553d141c4fdd7b"},
 ]
 pulumi = [
-    {file = "pulumi-3.5.1-py2.py3-none-any.whl", hash = "sha256:9a6c73f78d3e6569a14b9f88067c4b2f0889fafdad62717af43898c7c24de77b"},
+    {file = "pulumi-3.26.1-py2.py3-none-any.whl", hash = "sha256:c94d4f3c6e843d4e3a425b0df859d43374a621d8a13c35b4308ce8b582a63ec0"},
 ]
 pulumi-gcp = [
     {file = "pulumi_gcp-5.10.1.tar.gz", hash = "sha256:26f8d05d87322d192563ac85a406e3fb782e08f4b2a891a70fdbf48695609dec"},
